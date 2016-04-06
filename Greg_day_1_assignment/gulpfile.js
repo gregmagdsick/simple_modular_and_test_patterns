@@ -4,10 +4,10 @@ const mocha = require('mocha');
 const chai = require('chai');
 
 //mocha
-gulp.tas('testMocha', () => {
-  return gulp.src('')
-    .pipe()
-});
+// gulp.task('testMocha', () => {
+//   return gulp.src('')
+//     .pipe()
+// });
 
 //eslint - inc greeter_test.js and gulp.js
 gulp.task('testEslint:testFile', () => {
@@ -15,11 +15,11 @@ gulp.task('testEslint:testFile', () => {
   .pipe(eslint({
     'rules':{
       'quotes': [1, 'single'],
-      // 'semi': [1, 'always'],
       'indent': ['error', 2]
     },
     'envs':[
-      'mocha'
+      'mocha',
+      'es6'
     ]
   }
   ))
@@ -32,9 +32,11 @@ gulp.task('testEslint:non-testFile', () => {
   .pipe(eslint({
     'rules':{
       'quotes': [1, 'single'],
-      // 'semi': [1, 'always'],
       'indent': ['error', 2]
-    }
+    },
+    'envs':[
+      'es6'
+    ]
     }
   ))
   .pipe(eslint.format())
