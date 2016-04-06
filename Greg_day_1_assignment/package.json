@@ -1,7 +1,7 @@
 {
   "name": "greg",
   "version": "42.24.42",
-  "description": "the best greet script ever",
+  "description": "the best greet script ever. More better than anyone elses in the history of the world",
   "main": "index.js",
   "directories": {
     "test": "test"

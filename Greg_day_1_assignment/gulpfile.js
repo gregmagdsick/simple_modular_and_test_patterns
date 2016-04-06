@@ -1,15 +1,15 @@
 const gulp = require('gulp');
 const eslint = require('gulp-eslint');
-const mocha = require('mocha');
-const chai = require('chai');
+const mocha = require('gulp-mocha');
 
-//mocha
-// gulp.task('testMocha', () => {
-//   return gulp.src('')
-//     .pipe()
-// });
+gulp.task('testMocha', () => {
+  return gulp.src('./test/**/*test.js')
+    .pipe(mocha({
+      'reporter': 'spec'
+    }));
+});
 
-//eslint - inc greeter_test.js and gulp.js
+
 gulp.task('testEslint:testFile', () => {
   return gulp.src('./test/**/*test.js')
   .pipe(eslint({
@@ -43,4 +43,4 @@ gulp.task('testEslint:non-testFile', () => {
   .pipe(eslint.failOnError());
 });
 
-gulp.task('test',['testEslint:non-testFile','testEslint:testFile']);
+gulp.task('test',['testEslint:non-testFile', 'testEslint:testFile', 'testMocha']);
