@@ -3,5 +3,5 @@ const greeter = module.exports = function(name) {
 };
 
 greeter.prototype.greet = function(name) {
-  return "Hello " + name;
+  return 'Hello ' + name;
 };

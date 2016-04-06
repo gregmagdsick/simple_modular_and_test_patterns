@@ -1,0 +1,26 @@
+{
+  "name": "greg",
+  "version": "42.24.42",
+  "description": "the best greet script ever. More better than anyone elses in the history of the world",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "drink",
+    "toasty"
+  ],
+  "author": "greg.magdsick@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^2.0.0",
+    "gulp-mocha": "^2.2.0",
+    "mocha": "^2.4.5"
+  }
+}
