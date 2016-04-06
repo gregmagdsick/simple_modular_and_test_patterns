@@ -15,5 +15,11 @@
     "toasty"
   ],
   "author": "greg.magdsick@gmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^2.0.0",
+    "mocha": "^2.4.5"
+  }
 }
