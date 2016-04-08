@@ -13,11 +13,11 @@ gulp.task('testMocha', () => {
 gulp.task('testEslint:testFile', () => {
   return gulp.src('./test/**/*test.js')
   .pipe(eslint({
-    'rules':{
+    'rules': {
       'quotes': [1, 'single'],
       'indent': ['error', 2]
     },
-    'envs':[
+    'envs': [
       'mocha',
       'es6'
     ]
@@ -30,11 +30,11 @@ gulp.task('testEslint:testFile', () => {
 gulp.task('testEslint:non-testFile', () => {
   return gulp.src(['index.js', 'lib/**/*.js', 'gulp.js'])
   .pipe(eslint({
-    'rules':{
+    'rules': {
       'quotes': [1, 'single'],
       'indent': ['error', 2]
     },
-    'envs':[
+    'envs': [
       'es6'
     ]
     }
@@ -43,4 +43,4 @@ gulp.task('testEslint:non-testFile', () => {
   .pipe(eslint.failOnError());
 });
 
-gulp.task('test',['testEslint:non-testFile', 'testEslint:testFile', 'testMocha']);
+gulp.task('test', ['testEslint:non-testFile', 'testEslint:testFile', 'testMocha']);
